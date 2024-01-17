@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サンプル</title>
+<script type="text/javascript">
+
+<!--
+var stop2 = setInterval("alert('10秒間隔で表示されます。');", 10000);
+
+var dir="./image/";
+var list = new Array();
+for (var i = 0; i < 10; i++) {
+	list[i] = dir + i + ".gif";	
+	new Image().src = list[i];	
+}
+
+
+var count = 0;
+var cards=Math.floor(Math.random() *3);
+
+var icih=0;
+var ni=1;
+var san=2;
+function setTable(){
+count++;
+
+
+document.center1.src =list[cards];
+document.left.src = list[icih];
+document.center2.src = list[ni];
+document.right.src = list[san];
+return rancards;
+
+
+
+setTimeout("setTable();", 100);
+
+
+
+ }
+function imag1(){
+	if(cards==icih){
+
+	document.write("こんにちは");
+	alert("ok");
+}
+	
+else{
+	alert("間違えました。");
+	window.close();
+}
+
+}
+
+function imag2(){
+
+if(cards==ni){
+	document.write("こんにちは");
+	alert("ok");
+}
+	
+else{
+	alert("間違えました。");
+	window.close();
+}
+
+ }
+function imag3(){
+
+if(cards==san){
+	document.write("こんにちは");
+	alert("ok");
+}
+	
+else{
+	alert("間違えました。");
+	window.close();
+}
+
+ }
+function closewin(){
+			window.close();
+}
+// -->
+</script>
+</head>
+
+<body>
+<tr>
+<td><img src="./image/3.gif" width="180" height="240" border="0" alt="" name="center1"></td>
+</tr>
+<tr>
+<td><img src="./image/0.gif" width="180" height="240" border="1" alt="" name="left"></td>
+<td><img src="./image/1.gif" width="180" height="240" border="1" alt="" name="center2"></td>
+<td><img src="./image/2.gif" width="180" height="240" border="1" alt="" name="right"></td>
+</tr>
+</table>
+<form action="#">
+<input type="button" value="START" onclick="if (!count)setTable();">
+<input type="button" value="1" onclick="imag1();">
+<input type="button" value="2" onclick="imag2();">
+<input type="button" value="3" onclick="imag3();">
+<a href="javascript:closewin();">閉じる</a>
+</form>
+</body>
+
+</html>
